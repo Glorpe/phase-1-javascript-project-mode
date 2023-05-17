@@ -1,0 +1,38 @@
+body {
+    background: red;
+}
+
+#upvote-btn {
+    position: relative;
+    left: 300px;
+    top: 360px;
+}
+
+#downvote-btn {
+    position: relative;
+    left: 290px;
+    top: 350px;
+}
+div {
+    position: relative;
+    left: 200px;
+    top: 350px;
+}
+
+ul {
+    position: relative;
+    left: 200px;
+    top: 350px;
+}
+
+form {
+    position: relative;
+    left: 200px;
+}
+
+img {
+    position: relative;
+    width: 200px;
+    left: 10px;
+    top: 5px;
+}
