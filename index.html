@@ -7,16 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My Website</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      background-color: #8f0f0f; /* Default background color */
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <h1>Let's Upvote Memes</h1>
   </main>
-  <div class="picture1">
-    <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/0*Y602BVKpn-ek3V5P.png">
-  </div>
+  <button id="toggleButton">Toggle Background Color</button>
+
+  
   <button id="upvote-btn">Upvote</button>
   <div id="upvote-count">0</div>
 
@@ -26,10 +30,13 @@
   <div>
     <form>
       <input type="text" id="commentInput" placeholder="Add a comment...">
-      <button type="button" onclick="addComment()">Submit</button>
+      <button type="button" id ="button" onclick="addComment()">Submit</button>
     </form>
   </div>
   <div id="image-container"></div>
+  
+  
+  
 
   <ul id="commentList">
     <!-- comments will be added here -->

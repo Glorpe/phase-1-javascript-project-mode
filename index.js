@@ -1,27 +1,23 @@
-// Assuming you have an HTML element with id "image-container" to display the images
+// html element
 const imageContainer = document.getElementById('image-container');
 
-// Fetch the data from db.json
+// Fetch  data from db.json
 fetch('http://localhost:3000/images')
   .then(response => response.json())
   .then(data => {
     // Get the first 5 image URLs from the data array
     const imageUrls = data.slice(0, 5).map(object => object.imageUrl);
 
-    // Display the images on the webpage
+    // show images on webpage
     imageUrls.forEach(imageUrl => {
       const imageElement = document.createElement('img');
       imageElement.src = imageUrl;
       imageContainer.appendChild(imageElement);
     });
   })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+ 
 
 
-
-  
 const upvoteBtn = document.getElementById("upvote-btn");
 const upvoteCount = document.getElementById("upvote-count");
 let count = 0;
@@ -63,3 +59,15 @@ function addComment() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.getElementById('toggleButton');
+  var body = document.body;
+
+  button.addEventListener('click', function() {
+    if (body.style.backgroundColor === 'rgb(255, 255, 255)') {
+      body.style.backgroundColor = '#000'; // Change to black
+    } else {
+      body.style.backgroundColor = '#fff'; // Change to white
+    }
+  });
+});
