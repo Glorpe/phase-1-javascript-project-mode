@@ -12,3 +12,14 @@ DB.json
 Index.js
 
 - This file contains all of the functions showed on the page. It has functions to allow you to comment, upvote or downvote, and to be able to submit your comment. As well as giving you the ability to toggle light/dark mode. 
+
+Index.html 
+
+- This file contains the format and the elements displayed on the webpage.
+
+Links to the images I used 
+ - https://miro.medium.com/v2/resize:fit:600/format:webp/0*Y602BVKpn-ek3V5P.png
+ - https://miro.medium.com/v2/resize:fit:600/format:webp/0*NsfFeu-AcAPlBl6z.png
+ - https://miro.medium.com/v2/resize:fit:720/format:webp/0*BMeckhsXvnnt7FFx.png
+ - https://miro.medium.com/v2/resize:fit:600/format:webp/0*NZvP9GUv3kdjm7pB.png
+ - file:///C:/Users/pined/OneDrive/Pictures/0_KXKfeQb9C-kF0sel.jpg

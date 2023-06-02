@@ -17,7 +17,7 @@ fetch('http://localhost:3000/images')
   })
  
 
-
+// grabbing the HTML ID's of the buttons 
 const upvoteBtn = document.getElementById("upvote-btn");
 const upvoteCount = document.getElementById("upvote-count");
 let count = 0;
@@ -60,8 +60,8 @@ function addComment() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var button = document.getElementById('toggleButton');
-  var body = document.body;
+  let button = document.getElementById('toggleButton');
+  let body = document.body;
 
   button.addEventListener('click', function() {
     if (body.style.backgroundColor === 'rgb(255, 255, 255)') {
