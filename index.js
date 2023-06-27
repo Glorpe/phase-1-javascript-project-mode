@@ -1,42 +1,62 @@
-// html element
-const imageContainer = document.getElementById('image-container');
 
 // Fetch  data from db.json
 fetch('http://localhost:3000/images')
   .then(response => response.json())
   .then(data => {
     // Get the first 5 image URLs from the data array
-    const imageUrls = data.slice(0, 5).map(object => object.imageUrl);
-
-    // show images on webpage
-    imageUrls.forEach(imageUrl => {
+    data.forEach(card => {
+// create elements 
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('card');
+//create image element 
       const imageElement = document.createElement('img');
-      imageElement.src = imageUrl;
-      imageContainer.appendChild(imageElement);
+      imageElement.src = card.imageUrl;
+//create card name
+      const nameElement = document.createElement('h2');
+      nameElement.textContent = card.name;
+//create meme description 
+      const descriptionElement = document.createElement('p');
+      descriptionElement.textContent = card.description;
+      // create upvote button and the ability to keep count of upvotes
+      const upvoteButton = document.createElement('button');
+      upvoteButton.textContent = 'Upvote';
+      const upvoteCount = document.createElement('span');
+      upvoteCount.textContent = card.upvotes;
+      upvoteButton.addEventListener('click', () => {
+        card.upvotes++;
+        upvoteCount.textContent = card.upvotes;
+        
+      
+      });
+// create downvote button and the ability to create count of down votes
+      const downvoteButton = document.createElement('button');
+      downvoteButton.textContent = 'Downvote';
+      const downvoteCount = document.createElement('span');
+      downvoteCount.textContent = card.downvotes;
+      downvoteButton.addEventListener('click',() => {
+        card.downvotes++;
+        downvoteCount.textContent = card.downvotes;
+        
+      });
+
+      cardElement.appendChild(imageElement);
+      cardElement.appendChild(nameElement);
+      cardElement.appendChild(descriptionElement);
+      cardElement.appendChild(upvoteButton);
+      cardElement.appendChild(upvoteCount);
+      cardElement.appendChild(downvoteButton);
+      cardElement.appendChild(downvoteCount);
+
+      document.body.appendChild(cardElement);
+
     });
   })
+  .catch(error => {
+    console.error('Error:', error);
+  });
  
-
-// grabbing the HTML ID's of the buttons 
-const upvoteBtn = document.getElementById("upvote-btn");
-const upvoteCount = document.getElementById("upvote-count");
-let count = 0;
-//user click event for upvoting
-upvoteBtn.addEventListener("click", () => {
-  count++;
-  upvoteCount.innerText = count;
-});
-
-
-const downvoteBtn = document.getElementById("downvote-btn");
-const downvoteCount = document.getElementById("downvote-count");
-let down = 0;
-//user click event to show downvoting
-downvoteBtn.addEventListener("click", () => {
-  down++;
-  downvoteCount.innerText = down;
-});
-
+  
+ 
 
 function addComment() {
   // USER INPUT 

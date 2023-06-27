@@ -4,39 +4,36 @@ body {
 
 #upvote-btn {
     position: relative;
-    left: 300px;
+    left: 400px;
     top: 460px;
 }
 
 #downvote-btn {
     position: relative;
-    left: 290px;
+    left: 550px;
     top: 480px;
 }
 div {
     position: relative;
-    left: 200px;
-    top: 150px;
+    left: 650px;
+
 }
+
+
 #upvote-count {
     position: relative;
-    left: 250px;
+    left: 430px;
     top: 440px;
 }
 #downvote-count {
     position: relative;
-    left: 250px;
+    left: 430px;
     top: 455px;
 }
 ul {
     position: relative;
-    left: 200px;
-    top: 350px;
-}
-
-form {
-    position: relative;
-    left: 400px;
+    left: 1000px;
+    top: 20px;
 }
 
 
@@ -48,15 +45,15 @@ img {
 }
 #commentInput {
     position: relative;
-    left: -300px;
-    top: 350px;
+    left: 500px;
+    top: 10px;
 
 }
 
 #button {
     position: relative;
-    left: -300px;
-    top: 350px;
+    left: 500px;
+    top: 10px;
 }
 
 h1 {
