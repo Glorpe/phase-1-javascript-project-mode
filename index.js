@@ -1,8 +1,6 @@
 
 function createCard(card){
 
-
-
       const cardElement = document.createElement('div');
       cardElement.classList.add('card');
 
@@ -53,24 +51,23 @@ fetch('http://localhost:3000/images')
   });
 })
 
-function addComment() {
+const commentInput = document.getElementById('commentInput');
+const commentList = document.getElementById('commentList');
 
-  const commentInput = document.getElementById("commentInput");
-  const comment = commentInput.value;
-
-  if (comment.trim() === '') {
-    alert("Please add comment before submitting !");
-    return;
+commentInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    const comment = commentInput.value.trim();
+    if (comment !== '') {
+      addComment(comment);
+      commentInput.value = '';
+    }
   }
+});
 
-  const commentList = document.getElementById("commentList");
-  const commentItem = document.createElement("li");
-  const commentText = document.createTextNode(comment);
-  commentItem.appendChild(commentText);
-  commentList.appendChild(commentItem);
-
-
-  commentInput.value = "";
+function addComment(comment) {
+  const li = document.createElement('li');
+  li.textContent = comment;
+  commentList.appendChild(li);
 }
 
 
